@@ -4,538 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Gokul Furniture - Timeless designs crafted with love, comfort, and elegance">
-    <title>Gokul Furniture | Velvet Lounge Chair</title>
+    <title>Gokul Furniture | Products</title>
     <!-- Font imports -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- Icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            /* Color Palette */
-            --color-bg: #f9f7f3;
-            --color-text: #333333;
-            --color-primary: #805b4d;
-            --color-secondary: #d2691e;
-            --color-tertiary: #a67c52;
-            --color-accent: #e76f51;
-            --color-light: #ffffff;
-            --color-dark: #212121;
-            --color-gray-100: #f5f5f5;
-            --color-gray-200: #e5e5e5;
-            --color-gray-300: #d4d4d4;
-            --color-gray-400: #a3a3a3;
-            --color-gray-500: #737373;
-            --color-gray-600: #525252;
-            --color-green: #606c5d;
-            --color-beige: #e9e5dc;
-            --color-sand: #d6cfc7;
-            
-            /* Spacing System */
-            --space-xs: 0.5rem;
-            --space-sm: 1rem;
-            --space-md: 2rem;
-            --space-lg: 4rem;
-            
-            /* Border Radius */
-            --radius-sm: 4px;
-            --radius-md: 8px;
-            --radius-lg: 12px;
-            
-            /* Shadows */
-            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
-            --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-            
-            /* Typography */
-            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            
-            /* Transitions */
-            --transition-fast: 0.15s ease;
-            --transition-normal: 0.3s ease;
-            
-            /* Container Width */
-            --container-max: 1200px;
-            --container-padding: 1.5rem;
-        }
-
-        *, *::before, *::after {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-size: 16px;
-        }
-
-        body {
-            font-family: var(--font-sans);
-            background-color: var(--color-bg);
-            color: var(--color-text);
-            line-height: 1.6;
-            font-weight: 400;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        a {
-            color: var(--color-text);
-            text-decoration: none;
-            transition: color var(--transition-normal);
-        }
-
-        a:hover {
-            color: var(--color-accent);
-        }
-
-        .container {
-            width: 100%;
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 var(--container-padding);
-        }
-
-        /* Header styles */
-        .header {
-            background-color: rgba(249, 247, 243, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px;
-        }
-
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 600;
-            color: var(--color-primary);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: var(--space-md);
-            align-items: center;
-        }
-
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 0;
-            font-weight: 500;
-            font-size: 1rem;
-            color: var(--color-dark);
-        }
-
-        .nav-icons {
-            display: flex;
-            gap: var(--space-sm);
-        }
-
-        .icon-btn {
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: var(--color-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        /* Breadcrumb styles */
-        .breadcrumb {
-            display: flex;
-            list-style: none;
-            gap: 8px;
-            padding: var(--space-sm) 0;
-            font-size: 0.9rem;
-            color: var(--color-gray-500);
-        }
-
-        .breadcrumb a {
-            color: var(--color-gray-500);
-        }
-
-        .breadcrumb a:hover {
-            color: var(--color-primary);
-        }
-
-        .breadcrumb-separator {
-            color: var(--color-gray-400);
-        }
-
-        /* Product layout */
-        .product-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-lg);
-            margin: var(--space-md) 0 var(--space-lg);
-        }
-
-        /* Product gallery */
-        .product-gallery {
-            position: relative;
-        }
-
-        .main-image {
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            margin-bottom: var(--space-sm);
-            box-shadow: var(--shadow-sm);
-        }
-
-        .main-image img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
-
-        .gallery-nav {
-            display: flex;
-            gap: var(--space-xs);
-            overflow-x: auto;
-            padding-bottom: var(--space-xs);
-        }
-
-        .thumbnail {
-            width: 80px;
-            height: 80px;
-            border-radius: var(--radius-sm);
-            overflow: hidden;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity var(--transition-fast);
-        }
-
-        .thumbnail.active, .thumbnail:hover {
-            opacity: 1;
-        }
-
-        .thumbnail img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-badge {
-            position: absolute;
-            top: var(--space-sm);
-            left: var(--space-sm);
-            background-color: var(--color-beige);
-            color: var(--color-dark);
-            padding: 4px 12px;
-            border-radius: var(--radius-sm);
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .view-360 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            margin: var(--space-sm) 0;
-            font-size: 0.9rem;
-            color: var(--color-gray-600);
-        }
-
-        /* Product info */
-        .product-info h1 {
-            font-size: 2rem;
-            margin-bottom: var(--space-xs);
-            color: var(--color-dark);
-        }
-
-        .product-description {
-            margin: var(--space-sm) 0;
-            color: var(--color-gray-600);
-            line-height: 1.7;
-        }
-
-        .product-price {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: var(--color-dark);
-            margin: var(--space-md) 0;
-        }
-
-        .rating {
-            display: flex;
-            gap: 4px;
-            margin-bottom: var(--space-sm);
-            color: var(--color-accent);
-        }
-
-        /* Option selectors */
-        .option-section {
-            margin: var(--space-md) 0;
-        }
-
-        .option-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid var(--color-gray-200);
-            cursor: pointer;
-        }
-
-        .option-title {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 500;
-        }
-
-        .option-icon {
-            color: var(--color-gray-500);
-        }
-
-        .option-content {
-            padding: var(--space-sm) 0;
-        }
-
-        .color-options {
-            display: flex;
-            gap: var(--space-xs);
-            margin-top: var(--space-xs);
-        }
-
-        .color-option {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .color-option.active::after {
-            content: '';
-            position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            border: 2px solid var(--color-primary);
-            border-radius: 50%;
-        }
-
-        .charcoal {
-            background-color: #333333;
-        }
-
-        .navy {
-            background-color: #1b365d;
-        }
-
-        .gray {
-            background-color: #b0b0b0;
-        }
-
-        .cream {
-            background-color: #e8e4d5;
-        }
-
-        /* Action buttons */
-        .product-actions {
-            margin: var(--space-lg) 0;
-        }
-
-        .add-to-cart {
-            display: block;
-            width: 100%;
-            background-color: var(--color-primary);
-            color: white;
-            border: none;
-            border-radius: var(--radius-md);
-            padding: var(--space-sm) var(--space-md);
-            font-size: 1rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: background-color var(--transition-fast);
-            margin-bottom: var(--space-sm);
-        }
-
-        .add-to-cart:hover {
-            background-color: var(--color-tertiary);
-        }
-
-        .delivery-info {
-            text-align: center;
-            margin: var(--space-sm) 0;
-            color: var(--color-gray-500);
-            font-size: 0.9rem;
-        }
-
-        .action-buttons {
-            display: flex;
-            gap: var(--space-xs);
-            margin-top: var(--space-md);
-        }
-
-        .action-btn {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: var(--space-xs) var(--space-sm);
-            background-color: var(--color-light);
-            border: 1px solid var(--color-gray-300);
-            border-radius: var(--radius-md);
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: all var(--transition-fast);
-        }
-
-        .action-btn:hover {
-            background-color: var(--color-gray-100);
-        }
-
-        /* Product details */
-        .product-details {
-            margin: var(--space-lg) 0;
-        }
-
-        .details-section {
-            border-bottom: 1px solid var(--color-gray-200);
-        }
-
-        .details-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: var(--space-md) 0;
-            cursor: pointer;
-        }
-
-        .details-title {
-            font-size: 1.1rem;
-            font-weight: 500;
-        }
-
-        /* Recommended products */
-        .recommended {
-            margin: var(--space-xl) 0;
-        }
-
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: var(--space-md);
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--color-accent);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: var(--space-md);
-        }
-
-        .product-card {
-            border-radius: var(--radius-md);
-            overflow: hidden;
-            background-color: var(--color-light);
-            box-shadow: var(--shadow-sm);
-            transition: transform var(--transition-normal), box-shadow var(--transition-normal);
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
-        }
-
-        .card-image {
-            height: 240px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .card-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform var(--transition-normal);
-        }
-
-        .product-card:hover .card-image img {
-            transform: scale(1.05);
-        }
-
-        .card-content {
-            padding: var(--space-sm);
-        }
-
-        .card-title {
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
-
-        .card-price {
-            color: var(--color-accent);
-            font-weight: 500;
-        }
-
-        .wishlist-btn {
-            position: absolute;
-            top: var(--space-sm);
-            right: var(--space-sm);
-            background-color: rgba(255, 255, 255, 0.8);
-            border: none;
-            border-radius: 50%;
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            color: var(--color-gray-500);
-            transition: all var(--transition-fast);
-        }
-
-        .wishlist-btn:hover, .wishlist-btn.active {
-            color: var(--color-accent);
-            background-color: white;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .product-layout {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="product.css">
 </head>
 <body>
     <!-- Header -->
@@ -543,18 +19,34 @@
         <div class="container navbar">
             <a href="index.html" class="logo">Gokul Furniture</a>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Living</a></li>
-                <li><a href="bedroom.html" class="nav-link">Bedroom</a></li>
-                <li><a href="bathroom.html" class="nav-link">Bathroom</a></li>
-                <li><a href="kitchen.html" class="nav-link">Kitchen</a></li>
-                <li><a href="dining.html" class="nav-link">Dining</a></li>
-                <li><a href="office.html" class="nav-link">Office</a></li>
-                <li><a href="outdoor.html" class="nav-link">Outdoor</a></li>
+                <li><a href="#" class="nav-link">Living</a></li>
+                <li><a href="#" class="nav-link">Bedroom</a></li>
+                <li><a href="#" class="nav-link">Bathroom</a></li>
+                <li><a href="#" class="nav-link">Kitchen</a></li>
+                <li><a href="#" class="nav-link">Dining</a></li>
+                <li><a href="#" class="nav-link">Office</a></li>
+                <li><a href="#" class="nav-link">Outdoor</a></li>
             </ul>
             <div class="nav-icons">
-                <button class="icon-btn"><i class="fa fa-search"></i></button>
-                <button class="icon-btn"><i class="fa fa-shopping-cart"></i></button>
-                <button class="icon-btn"><i class="fa fa-user"></i></button>
+                <button class="icon-btn" id="searchToggle"><i class="fa fa-search"></i></button>
+                <button class="icon-btn" id="cartToggle">
+                    <a href="cart.html"></a>
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                <button class="icon-btn" id="profileToggle"><i class="fa fa-user"></i></button>
+            </div>
+        </div>
+        
+        <!-- Search Bar (Hidden by default) -->
+        <div class="search-container" id="searchContainer">
+            <div class="container">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search furniture..." class="search-input">
+                    <button class="search-close" id="searchClose">
+                        <i class="fa fa-times"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -565,300 +57,188 @@
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
             <li><span class="breadcrumb-separator">›</span></li>
-            <li><a href="living.html">Living room</a></li>
-            <li><span class="breadcrumb-separator">›</span></li>
-            <li><a href="chairs.html">Chairs</a></li>
-            <li><span class="breadcrumb-separator">›</span></li>
-            <li>Velvet Lounge Chair</li>
+            <li>Products</li>
         </ul>
 
-        <!-- Product Layout -->
-        <div class="product-layout">
-            <!-- Product Gallery -->
-            <div class="product-gallery">
-                <div class="gallery-badge">Bestseller</div>
-                <div class="main-image">
-                    <img src="https://vibecrafts.com/cdn/shop/files/vibecrafts-shell-motif-luxury-design-black-velvet-lounge-chair-AC622_1.jpg?v=1724995982&width=823" alt="Velvet Lounge Chair">
-                </div>
-                <div class="gallery-nav">
-                    <div class="thumbnail active">
-                        <img src="https://vibecrafts.com/cdn/shop/files/vibecrafts-shell-motif-luxury-design-black-velvet-lounge-chair-AC622_3.jpg?v=1724995982&width=823" alt="Velvet Lounge Chair - Front">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://vibecrafts.com/cdn/shop/files/vibecrafts-shell-motif-luxury-design-black-velvet-lounge-chair-AC622_5.jpg?v=1724995982&width=823" alt="Velvet Lounge Chair - Side">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://vibecrafts.com/cdn/shop/files/vibecrafts-shell-motif-luxury-design-black-velvet-lounge-chair-AC622_7.jpg?v=1724995982&width=823" alt="Velvet Lounge Chair - Back">
-                    </div>
-                    <div class="thumbnail">
-                        <img src="https://vibecrafts.com/cdn/shop/files/vibecrafts-shell-motif-luxury-design-black-velvet-lounge-chair-AC622_8.jpg?v=1724995982&width=823" alt="Velvet Lounge Chair - Detail">
-                    </div>
-                </div>
-                <div class="view-360">
-                    <span>360° View</span>
-                    <i class="fa fa-sync-alt"></i>
-                </div>
-            </div>
-
-            <!-- Product Information -->
-            <div class="product-info">
-                <h1>Velvet Lounge Chair</h1>
-                
-                <div class="rating">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span style="color: var(--color-gray-500); margin-left: 8px;">(42 reviews)</span>
-                </div>
-                
-                <p class="product-description">
-                    Experience the perfect blend of style, comfort, and versatility with our Velvet Lounge Chair. 
-                    Designed to elevate your home décor while offering unmatched comfort for relaxation or entertaining.
-                </p>
-                
-                <div class="product-price">7,999₹</div>
-                
-                <!-- Option Selectors -->
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-palette option-icon"></i>
-                            <span>Fabric</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                    <div class="option-content">
-                        <div class="color-options">
-                            <div class="color-option charcoal active"></div>
-                            <div class="color-option navy"></div>
-                            <div class="color-option gray"></div>
-                            <div class="color-option cream"></div>
-                            <span style="margin-left: 8px; color: var(--color-gray-500); align-self: center;">+18 more</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-couch option-icon"></i>
-                            <span>Seat Depth</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                </div>
-                
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-ruler option-icon"></i>
-                            <span>Size</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                </div>
-                
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-layer-group option-icon"></i>
-                            <span>Cushion Type</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                </div>
-                
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-fill-drip option-icon"></i>
-                            <span>Cushion Fill</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                </div>
-                
-                <div class="option-section">
-                    <div class="option-header">
-                        <div class="option-title">
-                            <i class="fa fa-shoe-prints option-icon"></i>
-                            <span>Legs</span>
-                        </div>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                </div>
-                
-                <!-- Product Actions -->
-                <div class="product-actions">
-                    <button class="add-to-cart">Add to cart - $849</button>
-                    <div class="delivery-info">Will be delivered in 10-14 weeks</div>
-                    
-                    <div class="action-buttons">
-                        <button class="action-btn">
+        <!-- Single Product View (Initially Hidden) -->
+        <section class="product-detail-section" id="productDetailSection" style="display: none;">
+            <div class="product-detail-container">
+                <div class="product-gallery">
+                    <div class="main-image-container">
+                        <img id="mainProductImage" src="" alt="Product Image" class="main-product-image">
+                        <button class="wishlist-btn" id="productWishlistBtn">
                             <i class="fa fa-heart"></i>
-                            <span>Save</span>
                         </button>
-                        <button class="action-btn">
-                            <i class="fa fa-ruler"></i>
-                            <span>Order free swatch</span>
-                        </button>
+                    </div>
+                    <div class="thumbnail-container" id="thumbnailContainer">
+                        <!-- Thumbnails will be dynamically added here -->
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 class="product-title" id="productTitle"></h1>
+                    <p class="product-price" id="productPrice"></p>
+                    <div class="product-rating" id="productRating">
+                        <!-- Rating stars will be added here -->
+                    </div>
+                    <p class="product-description" id="productDescription"></p>
+                    
+                    <div class="product-features" id="productFeatures">
+                        <h4>Key Features:</h4>
+                        <ul class="features-list" id="featuresList">
+                            <!-- Features will be dynamically added -->
+                        </ul>
                     </div>
                     
-                    <div class="action-buttons" style="margin-top: var(--space-sm);">
-                        <button class="action-btn">
-                            <i class="fa fa-tape"></i>
-                            <span>Book a measurement</span>
+                    <div class="product-actions">
+                        <button class="btn btn-primary" id="addToCartBtn">
+                            <i class="fa fa-shopping-cart"></i>
+                            Add to Cart
+                        </button>
+                        <button class="btn btn-secondary" id="buyNowBtn">
+                            Buy Now
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Product Details -->
-        <div class="product-details">
-            <div class="details-section">
-                <div class="details-header">
-                    <h3 class="details-title">Product Description</h3>
-                    <i class="fa fa-chevron-down"></i>
                 </div>
             </div>
             
-            <div class="details-section">
-                <div class="details-header">
-                    <h3 class="details-title">Dimensions</h3>
-                    <i class="fa fa-chevron-down"></i>
+            <!-- Recommended Products Section -->
+            <div class="recommended-section">
+                <h3 class="section-title">You Might Also Like</h3>
+                <div class="recommended-grid" id="recommendedGrid">
+                    <!-- Recommended products will be dynamically loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products-section" id="productsSection">
+            <h1 class="page-title">Our Furniture Collection</h1>
+            <p class="page-subtitle">Discover our handcrafted pieces designed for modern living</p>
+            
+            <!-- Filter Controls -->
+            <div class="filter-controls" id="filterControls">
+                <div class="filter-group">
+                    <label for="categoryFilter">Category:</label>
+                    <select id="categoryFilter" class="filter-select">
+                        <option value="">All Categories</option>
+                        <option value="living">Living Room</option>
+                        <option value="bedroom">Bedroom</option>
+                        <option value="dining">Dining Room</option>
+                        <option value="office">Office</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="priceFilter">Price Range:</label>
+                    <select id="priceFilter" class="filter-select">
+                        <option value="">All Prices</option>
+                        <option value="0-25000">Under ₹25,000</option>
+                        <option value="25000-50000">₹25,000 - ₹50,000</option>
+                        <option value="50000-100000">₹50,000 - ₹1,00,000</option>
+                        <option value="100000+">Above ₹1,00,000</option>
+                    </select>
                 </div>
             </div>
             
-            <div class="details-section">
-                <div class="details-header">
-                    <h3 class="details-title">Features</h3>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
+            <!-- Products Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be dynamically loaded here -->
             </div>
             
-            <div class="details-section">
-                <div class="details-header">
-                    <h3 class="details-title">Frequently asked questions</h3>
-                    <i class="fa fa-chevron-down"></i>
-                </div>
+            <!-- No Results Message -->
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fa fa-search"></i>
+                <h3>No products found</h3>
+                <p>Try adjusting your search terms</p>
             </div>
-        </div>
-        
-        <!-- Recommended Products -->
-        <div class="recommended">
-            <h2 class="section-title">You may also like</h2>
-            
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://www.lakdi.com/cdn/shop/files/Three_Seater_Sofa_Living_Room_Sofa_Modern_Sofa_Green_-_-3772630.jpg?v=1744031929&width=500" alt="Modern Sofa">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Modern Sofa</h3>
-                        <div class="card-price">6,999₹</div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://www.godrejinterio.com/imagestore/B2C/56121403SD00202/56121403SD00202_A2_500x500.jpg" alt="Coffee Table">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Coffee Table</h3>
-                        <div class="card-price">4,499₹</div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://i.ytimg.com/vi/yrLMYvyQO8s/maxresdefault.jpg" alt="Floor Lamp">
-                        <button class="wishlist-btn active">
-                            <i class="fas fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Floor Lamp</h3>
-                        <div class="card-price">2,999₹</div>
-                    </div>
-                </div>
-                
-                <div class="product-card">
-                    <div class="card-image">
-                        <img src="https://s.alicdn.com/@sc04/kf/Ha63b226a5ca244f6ad5e1eba37c67b0fj.jpg_720x720q50.jpg" alt="Side Table">
-                        <button class="wishlist-btn">
-                            <i class="far fa-heart"></i>
-                        </button>
-                    </div>
-                    <div class="card-content">
-                        <h3 class="card-title">Side Table</h3>
-                        <div class="card-price">2,499₹</div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
     
-    <footer class="footer" style="margin-top: var(--space-xl); background-color: var(--color-dark); color: var(--color-gray-300); padding: var(--space-lg) 0;">
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-overlay" id="cartOverlay"></div>
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <button class="cart-close" id="cartClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <div class="empty-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            </div>
+            <div class="cart-footer" id="cartFooter" style="display: none;">
+                <div class="cart-total">
+                    <strong>Total: ₹<span id="cartTotal">0</span></strong>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Modal -->
+    <div class="modal" id="profileModal">
+        <div class="modal-overlay" id="profileOverlay"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Profile</h3>
+                <button class="modal-close" id="profileClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-info">
+                    <div class="profile-avatar">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <div class="profile-details">
+                        <h4>Guest User</h4>
+                        <p>guest@example.com</p>
+                        <div class="profile-stats">
+                            <div class="stat">
+                                <span class="stat-number" id="wishlistCount">0</span>
+                                <span class="stat-label">Wishlist Items</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0</span>
+                                <span class="stat-label">Orders</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-actions">
+                    <button class="profile-btn">View Wishlist</button>
+                    <button class="profile-btn">Order History</button>
+                    <button class="profile-btn">Settings</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay" id="productOverlay"></div>
+        <div class="modal-content product-modal-content">
+            <div class="modal-header">
+                <h3 id="modalProductTitle">Product Details</h3>
+                <button class="modal-close" id="productModalClose">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="productModalBody">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
         <div class="container">
-            <p style="text-align: center;">&copy; 2025 Gokul Furniture. All rights reserved.</p>
+            <p>&copy; 2025 Gokul Furniture. All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Thumbnail click handler
-            const thumbnails = document.querySelectorAll('.thumbnail');
-            const mainImage = document.querySelector('.main-image img');
-            
-            thumbnails.forEach(thumb => {
-                thumb.addEventListener('click', function() {
-                    // Remove active class from all thumbnails
-                    thumbnails.forEach(t => t.classList.remove('active'));
-                    // Add active class to clicked thumbnail
-                    this.classList.add('active');
-                    // Update main image (in a real implementation, you'd change the src)
-                    mainImage.src = this.querySelector('img').src;
-                });
-            });
-            
-            // Color option click handler
-            const colorOptions = document.querySelectorAll('.color-option');
-            
-            colorOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    // Remove active class from all color options
-                    colorOptions.forEach(o => o.classList.remove('active'));
-                    // Add active class to clicked option
-                    this.classList.add('active');
-                });
-            });
-            
-            // Wishlist button handler
-            const wishlistBtns = document.querySelectorAll('.wishlist-btn');
-            
-            wishlistBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.classList.toggle('active');
-                    const icon = this.querySelector('i');
-                    if (this.classList.contains('active')) {
-                        icon.classList.remove('far');
-                        icon.classList.add('fas');
-                    } else {
-                        icon.classList.remove('fas');
-                        icon.classList.add('far');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="product.js"></script>
 </body>
 </html>
