@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="product.css">
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
@@ -30,14 +32,13 @@
             <div class="nav-icons">
                 <button class="icon-btn" id="searchToggle"><i class="fa fa-search"></i></button>
                 <button class="icon-btn" id="cartToggle">
-                    <a href="cart.html"></a>
                     <i class="fa fa-shopping-cart"></i>
                     <span class="cart-count" id="cartCount">0</span>
                 </button>
                 <button class="icon-btn" id="profileToggle"><i class="fa fa-user"></i></button>
             </div>
         </div>
-        
+
         <!-- Search Bar (Hidden by default) -->
         <div class="search-container" id="searchContainer">
             <div class="container">
@@ -56,6 +57,7 @@
         <!-- Breadcrumb -->
         <ul class="breadcrumb">
             <li><a href="index.html">Home</a></li>
+
             <li><span class="breadcrumb-separator">›</span></li>
             <li><a href="product.html">Product</a></li>
         </ul>
@@ -74,7 +76,7 @@
                         <!-- Thumbnails will be dynamically added here -->
                     </div>
                 </div>
-                
+
                 <div class="product-info">
                     <h1 class="product-title" id="productTitle"></h1>
                     <p class="product-price" id="productPrice"></p>
@@ -82,14 +84,14 @@
                         <!-- Rating stars will be added here -->
                     </div>
                     <p class="product-description" id="productDescription"></p>
-                    
+
                     <div class="product-features" id="productFeatures">
                         <h4>Key Features:</h4>
                         <ul class="features-list" id="featuresList">
                             <!-- Features will be dynamically added -->
                         </ul>
                     </div>
-                    
+
                     <div class="product-actions">
                         <button class="btn btn-primary" id="addToCartBtn">
                             <i class="fa fa-shopping-cart"></i>
@@ -101,7 +103,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Recommended Products Section -->
             <div class="recommended-section">
                 <h3 class="section-title">You Might Also Like</h3>
@@ -115,7 +117,7 @@
         <section class="products-section" id="productsSection">
             <h1 class="page-title">Our Furniture Collection</h1>
             <p class="page-subtitle">Discover our handcrafted pieces designed for modern living</p>
-            
+
             <!-- Filter Controls -->
             <div class="filter-controls" id="filterControls">
                 <div class="filter-group">
@@ -139,12 +141,12 @@
                     </select>
                 </div>
             </div>
-            
+
             <!-- Products Grid -->
             <div class="products-grid" id="productsGrid">
                 <!-- Products will be dynamically loaded here -->
             </div>
-            
+
             <!-- No Results Message -->
             <div class="no-results" id="noResults" style="display: none;">
                 <i class="fa fa-search"></i>
@@ -153,7 +155,7 @@
             </div>
         </section>
     </main>
-    
+
     <!-- Cart Sidebar -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-overlay" id="cartOverlay"></div>
@@ -233,7 +235,7 @@
             </div>
         </div>
     </div>
-    
+
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Gokul Furniture. All rights reserved.</p>
@@ -241,4 +243,5 @@
     </footer>
     <script src="product.js"></script>
 </body>
+
 </html>
