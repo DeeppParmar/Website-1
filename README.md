@@ -15,5 +15,5 @@ This is my first website project built using **HTML**, **CSS**, and **JavaScript
 - Clean and organized layout
 - Simple and user-friendly UI
 
-## 📁 Folder Structure
+
 
